@@ -62,6 +62,15 @@ public class RagdollController : MonoBehaviour
         }
     }
 
+    public void OnAttackLeft(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && IsGrounded())
+        {
+            _isJumping = false;
+            // Attack code
+        }
+    }
+
     
 
     private void Move()
